@@ -40,6 +40,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
+function sumAndMultiply(num1, num2, num3) {
+  return [num1 + num2 + num3, num1 * num2 * num3, num1 + ' and ' + num2 + ' and ' + num3 + ' sum to ' + (num1 + num2 + num3) + '.', 'The product of ' + num1 + ' and ' + num2 + ' and ' + num3 + ' is ' + (num1 * num2 * num3) + '.'];
+}
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
 
