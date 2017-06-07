@@ -8,7 +8,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(num1, num2) {
-  return [num1 * num2, 'The sum of ' + num1 + ' and ' + num2 + ' is ' + (num1 * num2) + '.'];
+  return [num1 + num2, 'The sum of ' + num1 + ' and ' + num2 + ' is ' + (num1 + num2) + '.'];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -23,7 +23,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-
+function multiply(num1, num2) {
+  return [num1 * num2, 'The product of ' + num1 + ' and ' + num2 + ' is ' + (num1 * num2) + '.'];
+}
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(4,7);
 
@@ -38,6 +40,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
+function sumAndMultiply(num1, num2, num3) {
+  return [num1 + num2 + num3, num1 * num2 * num3, num1 + ' and ' + num2 + ' and ' + num3 + ' sum to ' + (num1 + num2 + num3) + '.', 'The product of ' + num1 + ' and ' + num2 + ' and ' + num3 + ' is ' + (num1 * num2 * num3) + '.'];
+}
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
 
@@ -48,6 +54,11 @@ testSumAndMultiply(4,7,5);
 Write a function called sumArray() that takes in an array of numbers as its argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
+
+function sumArray(testArray) {
+  return [testArray[0] + testArray[1] + testArray[2],
+  testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + (testArray[0] + testArray[1] + testArray[2]) + ' is their sum.'];
+}
 
 // Write your code here
 testArray = [2,3,4];
@@ -62,6 +73,11 @@ testSumArray(testArray);
 Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 "The numbers 2,3,4 have a product of 24."
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
+
+function multiplyArray(testArray) {
+  return [testArray[0] * testArray[1] * testArray[2], 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + (testArray[0] * testArray[1] * testArray[2]) + '.'];
+
+}
 
 // Write your code here
 
@@ -82,7 +98,7 @@ testMultiplyArray(testArray);
 /////////////////////////////////////
 
 function testSum() {
-  if (sum(4,7)[1] === 'The sum of 4 and 7 is 11.') {
+  if (sum(4, 7)[1] === 'The sum of 4 and 7 is 11.') {
     console.log('%c TEST FOR sum() PASSES', 'color: green');
   } else {
     console.log('%c TEST FOR sum() FAILS', 'color: red');
@@ -90,7 +106,7 @@ function testSum() {
 }
 
 function testMultiply() {
-  if (multiply(5,9)[1] === 'The product of 5 and 9 is 45.') {
+  if (multiply(5, 9)[1] === 'The product of 5 and 9 is 45.') {
     console.log('%c TEST FOR multiply() PASSES', 'color: green');
   } else {
     console.log('%c TEST FOR multiply() FAILS', 'color: red');
